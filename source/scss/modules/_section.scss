@@ -1,0 +1,15 @@
+section {
+  position: relative;
+  min-height: 600px;
+  font-size: 20px; font-size: 2rem;
+  .content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 5% 0;
+  }
+}
+
+@import "section/cover";
+@import "section/purchase";
+@import "section/problem";
+@import "section/cover-up";

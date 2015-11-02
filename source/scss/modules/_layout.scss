@@ -1,0 +1,25 @@
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html { height: 100%; }
+body { height: 100%; }
+#page {
+	height: 100%;
+}
+header {
+
+}
+nav {
+	position: fixed;
+	top: 25px; left: 0;
+	width: 100%;
+}
+main {
+	height: 100%;
+	// @include container;
+}
+footer {
+
+}
