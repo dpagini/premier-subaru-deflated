@@ -620,23 +620,29 @@ section .content {
 /* line 2, ../../../source/scss/modules/section/_cover.scss */
 section#cover {
   height: 100%;
-  background-color: yellow;
+  background-color: pink;
   color: #ffffff;
+  display: table;
 }
 /* line 9, ../../../source/scss/modules/section/_cover.scss */
 section#cover .content {
   /* vertically center */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  		/*
+  		position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  		*/
   background: transparent;
   /* The Fallback */
   background: rgba(255, 255, 255, 0.2);
   padding: 5% 10%;
   margin: 0;
 }
-/* line 21, ../../../source/scss/modules/section/_cover.scss */
+/* line 26, ../../../source/scss/modules/section/_cover.scss */
 section#cover h1 {
   font-size: 42px;
   font-size: 4.2rem;
@@ -645,7 +651,7 @@ section#cover h1 {
   margin: 0;
   padding: 0;
 }
-/* line 27, ../../../source/scss/modules/section/_cover.scss */
+/* line 32, ../../../source/scss/modules/section/_cover.scss */
 section#cover h2 {
   font-size: 32px;
   font-size: 3.2rem;
@@ -655,12 +661,16 @@ section#cover h2 {
   padding: 0;
 }
 @media screen and (min-width: 610px) {
-  /* line 38, ../../../source/scss/modules/section/_cover.scss */
+  /* line 2, ../../../source/scss/modules/section/_cover.scss */
+  section#cover {
+    background-attachment: fixed;
+  }
+  /* line 43, ../../../source/scss/modules/section/_cover.scss */
   section#cover h1 {
     font-size: 60px;
     font-size: 6rem;
   }
-  /* line 41, ../../../source/scss/modules/section/_cover.scss */
+  /* line 46, ../../../source/scss/modules/section/_cover.scss */
   section#cover h2 {
     font-size: 40px;
     font-size: 4rem;
