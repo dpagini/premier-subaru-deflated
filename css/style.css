@@ -605,11 +605,12 @@ nav ul li a {
 /* line 1, ../../../source/scss/modules/_section.scss */
 section {
   position: relative;
+  width: 100%;
   min-height: 600px;
   font-size: 20px;
   font-size: 2rem;
 }
-/* line 5, ../../../source/scss/modules/_section.scss */
+/* line 6, ../../../source/scss/modules/_section.scss */
 section .content {
   width: 80%;
   margin: 0 auto;
