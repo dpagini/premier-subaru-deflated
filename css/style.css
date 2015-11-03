@@ -621,7 +621,7 @@ section .content {
 section#cover {
   display: table;
   height: 100%;
-  background: transparent url("/images/hero.jpg") center bottom no-repeat scroll;
+  background: transparent url("/images/tpms-mobile.jpg") center bottom no-repeat scroll;
   background-size: cover;
   color: #ffffff;
 }
@@ -675,6 +675,12 @@ section#cover h2 {
   section#cover h2 {
     font-size: 40px;
     font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* line 2, ../../../source/scss/modules/section/_cover.scss */
+  section#cover {
+    background-image: url("/images/tpms-full.jpg");
   }
 }
 
