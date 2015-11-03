@@ -28,7 +28,8 @@ $(document).ready(function() {
 	$("a.scroll.top").click(function(e) { e.preventDefault(); });
 	// scroll to top functionality
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 100) {
+		$("body").toggleClass("scrolled", ($(this).scrollTop() > 0));
+		if ($(this).scrollTop() > 10) {
 			$("a.scroll.top").fadeIn();
 		} else {
 			$("a.scroll.top").fadeOut();

@@ -471,13 +471,11 @@ body {
 
 /* line 14, ../../../source/scss/modules/_layout.scss */
 nav {
-  position: fixed;
-  top: 25px;
-  left: 0;
+  z-index: 100;
   width: 100%;
 }
 
-/* line 19, ../../../source/scss/modules/_layout.scss */
+/* line 18, ../../../source/scss/modules/_layout.scss */
 main {
   height: 100%;
 }
@@ -509,44 +507,35 @@ header {
 
 /* line 1, ../../../source/scss/modules/_nav.scss */
 nav {
-  z-index: 100;
-  color: #D5BF86;
-  background-color: #A71D31;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
+  color: #A71D31;
+  background-color: #ffffff;
   -moz-transition-property: all;
   -o-transition-property: all;
   -webkit-transition-property: all;
   transition-property: all;
-  -moz-transition-duration: 2s;
-  -o-transition-duration: 2s;
-  -webkit-transition-duration: 2s;
-  transition-duration: 2s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
   -moz-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
 /* line 9, ../../../source/scss/modules/_nav.scss */
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-/* line 14, ../../../source/scss/modules/_nav.scss */
 nav ul li a {
   display: block;
-  padding: 0.5em 1em;
   color: inherit;
 }
-/* line 18, ../../../source/scss/modules/_nav.scss */
-nav ul li a:hover {
-  color: #A71D31;
-  background-color: #D5BF86;
-  text-decoration: underline;
-}
 @media screen and (min-width: 610px) {
-  /* line 31, ../../../source/scss/modules/_nav.scss */
+  /* line 1, ../../../source/scss/modules/_nav.scss */
+  nav {
+    position: fixed;
+    top: 25px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  /* line 22, ../../../source/scss/modules/_nav.scss */
   nav ul {
     float: left;
     margin: 0;
@@ -581,14 +570,35 @@ nav ul li a:hover {
   nav ul li.last {
     padding-right: 0;
   }
-  /* line 37, ../../../source/scss/modules/_nav.scss */
+  /* line 28, ../../../source/scss/modules/_nav.scss */
   nav ul li {
     position: relative;
     right: 50%;
   }
-  /* line 40, ../../../source/scss/modules/_nav.scss */
+  /* line 31, ../../../source/scss/modules/_nav.scss */
+  nav ul li a {
+    font-size: 18px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 1em;
+    -moz-transition-property: padding;
+    -o-transition-property: padding;
+    -webkit-transition-property: padding;
+    transition-property: padding;
+  }
+  /* line 35, ../../../source/scss/modules/_nav.scss */
   nav ul li a:hover {
     text-decoration: none;
+  }
+  /* line 41, ../../../source/scss/modules/_nav.scss */
+  body.scrolled nav {
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 2px solid #A71D31;
+  }
+  /* line 45, ../../../source/scss/modules/_nav.scss */
+  body.scrolled nav a {
+    padding: 0.5em 1em;
   }
 }
 
@@ -609,7 +619,7 @@ section .content {
 /* line 2, ../../../source/scss/modules/section/_cover.scss */
 section#cover {
   height: 100%;
-  background: url("/images/hero.jpg") center bottom no-repeat fixed;
+  background: url("/images/hero.jpg") center bottom no-repeat scroll;
   background-size: cover;
   color: #ffffff;
 }
@@ -643,6 +653,12 @@ section#cover h2 {
   color: inherit;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 610px) {
+  /* line 2, ../../../source/scss/modules/section/_cover.scss */
+  section#cover {
+    background-attachment: fixed;
+  }
 }
 
 /* line 2, ../../../source/scss/modules/section/_problem.scss */
