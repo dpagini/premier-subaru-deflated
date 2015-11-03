@@ -36,7 +36,21 @@ $(document).ready(function() {
 		}
 	});
 
-	// parallax // @TODO fix for our application
+	// parallax // example: http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
+	$(document).ready(function(){
+    $('section[data-parallax-effect="fixed"]').each(function(){
+				var $section = $(this);
+console.log("bp init set to: " + $section.css("backgroundPosition"));
+        $(window).scroll(function() {
+console.log("scroll event, bp set to: " + $section.css("backgroundPosition"));
+						var speed = $section.data('parallax-speed') || 10;
+            $section.css({ backgroundPosition: '50% -' + ($(this).scrollTop() / speed) + 'px' });
+console.log("just set bp to: " + $section.css("backgroundPosition"));
+        });
+    });
+});
+
+	// parallax // @TODO fix for our application - maybe use "nav a" as selector?
 	$('a[href*=#]').each(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname && this.hash.replace(/#/,'')) {
 			var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');

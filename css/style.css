@@ -621,11 +621,12 @@ section .content {
 section#cover {
   display: table;
   height: 100%;
-  background: transparent url("/images/tpms-mobile.jpg") center bottom no-repeat scroll;
+  padding: 20%;
+  background: transparent url("/images/tpms-mobile.jpg") center bottom no-repeat fixed;
   background-size: cover;
   color: #ffffff;
 }
-/* line 8, ../../../source/scss/modules/section/_cover.scss */
+/* line 9, ../../../source/scss/modules/section/_cover.scss */
 section#cover .content {
   /* vertically center */
   display: table-cell;
@@ -637,13 +638,13 @@ section#cover .content {
       left: 50%;
       transform: translate(-50%, -50%);
   		*/
-  background: transparent;
+  background-color: transparent;
   /* The Fallback */
-  background: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 5% 10%;
   margin: 0;
 }
-/* line 25, ../../../source/scss/modules/section/_cover.scss */
+/* line 26, ../../../source/scss/modules/section/_cover.scss */
 section#cover h1 {
   font-size: 42px;
   font-size: 4.2rem;
@@ -652,7 +653,7 @@ section#cover h1 {
   margin: 0;
   padding: 0;
 }
-/* line 31, ../../../source/scss/modules/section/_cover.scss */
+/* line 32, ../../../source/scss/modules/section/_cover.scss */
 section#cover h2 {
   font-size: 32px;
   font-size: 3.2rem;
@@ -666,12 +667,12 @@ section#cover h2 {
   section#cover {
     background-attachment: fixed;
   }
-  /* line 42, ../../../source/scss/modules/section/_cover.scss */
+  /* line 43, ../../../source/scss/modules/section/_cover.scss */
   section#cover h1 {
     font-size: 60px;
     font-size: 6rem;
   }
-  /* line 45, ../../../source/scss/modules/section/_cover.scss */
+  /* line 46, ../../../source/scss/modules/section/_cover.scss */
   section#cover h2 {
     font-size: 40px;
     font-size: 4rem;
