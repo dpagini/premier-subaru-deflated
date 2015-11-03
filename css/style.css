@@ -622,7 +622,7 @@ section#cover {
   display: table;
   height: 100%;
   padding: 20%;
-  background: transparent url("/images/tpms-mobile.jpg") center bottom no-repeat fixed;
+  background: transparent url("/images/tpms-mobile.jpg") center bottom no-repeat scroll;
   background-size: cover;
   color: #ffffff;
 }
@@ -665,14 +665,18 @@ section#cover h2 {
 @media screen and (min-width: 610px) {
   /* line 2, ../../../source/scss/modules/section/_cover.scss */
   section#cover {
-    background-attachment: fixed;
+    /*
+    	"background-attachment: fixed;" causes many issues with mobile devices.
+    		to combat this, for the time being, we will implement a javascript solution described
+    		here: http://jsfiddle.net/QN9cH/1/
+    */
   }
-  /* line 43, ../../../source/scss/modules/section/_cover.scss */
+  /* line 48, ../../../source/scss/modules/section/_cover.scss */
   section#cover h1 {
     font-size: 60px;
     font-size: 6rem;
   }
-  /* line 46, ../../../source/scss/modules/section/_cover.scss */
+  /* line 51, ../../../source/scss/modules/section/_cover.scss */
   section#cover h2 {
     font-size: 40px;
     font-size: 4rem;

@@ -36,16 +36,12 @@ $(document).ready(function() {
 		}
 	});
 
-	// parallax // example: http://code.tutsplus.com/tutorials/a-simple-parallax-scrolling-technique--net-27641
+	// parallax // example: http://jsfiddle.net/QN9cH/1/
 	$(document).ready(function(){
     $('section[data-parallax-effect="fixed"]').each(function(){
 				var $section = $(this);
-console.log("bp init set to: " + $section.css("backgroundPosition"));
         $(window).scroll(function() {
-console.log("scroll event, bp set to: " + $section.css("backgroundPosition"));
-						var speed = $section.data('parallax-speed') || 10;
-            $section.css({ backgroundPosition: '50% -' + ($(this).scrollTop() / speed) + 'px' });
-console.log("just set bp to: " + $section.css("backgroundPosition"));
+						$section.css('background-position-y', $(this).scrollTop() + 'px');
         });
     });
 });
