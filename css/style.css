@@ -619,12 +619,13 @@ section .content {
 
 /* line 2, ../../../source/scss/modules/section/_cover.scss */
 section#cover {
-  height: 100%;
-  background-color: pink;
-  color: #ffffff;
   display: table;
+  height: 100%;
+  background: transparent url("/images/hero.jpg") center bottom no-repeat scroll;
+  background-size: cover;
+  color: #ffffff;
 }
-/* line 9, ../../../source/scss/modules/section/_cover.scss */
+/* line 8, ../../../source/scss/modules/section/_cover.scss */
 section#cover .content {
   /* vertically center */
   display: table-cell;
@@ -642,7 +643,7 @@ section#cover .content {
   padding: 5% 10%;
   margin: 0;
 }
-/* line 26, ../../../source/scss/modules/section/_cover.scss */
+/* line 25, ../../../source/scss/modules/section/_cover.scss */
 section#cover h1 {
   font-size: 42px;
   font-size: 4.2rem;
@@ -651,7 +652,7 @@ section#cover h1 {
   margin: 0;
   padding: 0;
 }
-/* line 32, ../../../source/scss/modules/section/_cover.scss */
+/* line 31, ../../../source/scss/modules/section/_cover.scss */
 section#cover h2 {
   font-size: 32px;
   font-size: 3.2rem;
@@ -665,12 +666,12 @@ section#cover h2 {
   section#cover {
     background-attachment: fixed;
   }
-  /* line 43, ../../../source/scss/modules/section/_cover.scss */
+  /* line 42, ../../../source/scss/modules/section/_cover.scss */
   section#cover h1 {
     font-size: 60px;
     font-size: 6rem;
   }
-  /* line 46, ../../../source/scss/modules/section/_cover.scss */
+  /* line 45, ../../../source/scss/modules/section/_cover.scss */
   section#cover h2 {
     font-size: 40px;
     font-size: 4rem;
