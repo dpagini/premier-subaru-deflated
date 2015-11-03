@@ -619,11 +619,10 @@ section .content {
 /* line 2, ../../../source/scss/modules/section/_cover.scss */
 section#cover {
   height: 100%;
-  background: url("/images/hero.jpg") center bottom no-repeat scroll;
-  background-size: cover;
+  background-color: yellow;
   color: #ffffff;
 }
-/* line 8, ../../../source/scss/modules/section/_cover.scss */
+/* line 9, ../../../source/scss/modules/section/_cover.scss */
 section#cover .content {
   /* vertically center */
   position: absolute;
@@ -636,28 +635,34 @@ section#cover .content {
   padding: 5% 10%;
   margin: 0;
 }
-/* line 20, ../../../source/scss/modules/section/_cover.scss */
+/* line 21, ../../../source/scss/modules/section/_cover.scss */
 section#cover h1 {
-  font-size: 60px;
-  font-size: 6rem;
+  font-size: 42px;
+  font-size: 4.2rem;
   color: inherit;
   text-align: center;
   margin: 0;
   padding: 0;
 }
-/* line 26, ../../../source/scss/modules/section/_cover.scss */
+/* line 27, ../../../source/scss/modules/section/_cover.scss */
 section#cover h2 {
-  font-size: 40px;
-  font-size: 4rem;
+  font-size: 32px;
+  font-size: 3.2rem;
   text-align: center;
   color: inherit;
   margin: 0;
   padding: 0;
 }
 @media screen and (min-width: 610px) {
-  /* line 2, ../../../source/scss/modules/section/_cover.scss */
-  section#cover {
-    background-attachment: fixed;
+  /* line 38, ../../../source/scss/modules/section/_cover.scss */
+  section#cover h1 {
+    font-size: 60px;
+    font-size: 6rem;
+  }
+  /* line 41, ../../../source/scss/modules/section/_cover.scss */
+  section#cover h2 {
+    font-size: 40px;
+    font-size: 4rem;
   }
 }
 
