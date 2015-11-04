@@ -28,14 +28,25 @@ $(document).ready(function() {
 	$("a.scroll.top").click(function(e) { e.preventDefault(); });
 	// scroll to top functionality
 	$(window).scroll(function() {
-		if ($(this).scrollTop() > 100) {
+		$("body").toggleClass("scrolled", ($(this).scrollTop() > 0));
+		if ($(this).scrollTop() > 10) {
 			$("a.scroll.top").fadeIn();
 		} else {
 			$("a.scroll.top").fadeOut();
 		}
 	});
 
-	// parallax // @TODO fix for our application
+	// parallax // example: http://jsfiddle.net/QN9cH/1/
+	$(document).ready(function(){
+    $('[data-parallax-effect="fixed"]').each(function(){
+				var $section = $(this);
+        $(window).scroll(function() {
+						$section.css('background-position-y', $(this).scrollTop() + 'px');
+        });
+    });
+});
+
+	// parallax // @TODO fix for our application - maybe use "nav a" as selector?
 	$('a[href*=#]').each(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname && this.hash.replace(/#/,'')) {
 			var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');

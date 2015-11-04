@@ -1,0 +1,30 @@
+section {
+	&#intro {
+    @include box-shadow(rgba($color-white,0.75) 0 0 20px 5px);
+    z-index: $zindex-nonzero;
+    .content {
+      font-family: "Bad Script", cursive;
+      p {
+        font-weight: bold;
+        line-height: 2.5;
+        @media screen and (min-width: $breakpoint-medium) {
+          font-size: 28px; font-size: 2.8rem;
+        }
+        &:before,&:after {
+          position: relative;
+          top: -5px;
+          vertical-align: super;
+        }
+        &:before {
+          content: $fa-var-quote-left;
+        }
+        &:after {
+          content: $fa-var-quote-right;
+        }
+      }
+    }
+    h2 {
+      visibility: hidden;
+    }
+  }
+}

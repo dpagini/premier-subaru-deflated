@@ -1,5 +1,6 @@
 section {
   position: relative;
+  width: 100%;
   min-height: 600px;
   font-size: 20px; font-size: 2rem;
   .content {
@@ -10,6 +11,8 @@ section {
 }
 
 @import "section/cover";
+@import "section/intro";
 @import "section/purchase";
 @import "section/problem";
 @import "section/cover-up";
+@import "section/commercial";

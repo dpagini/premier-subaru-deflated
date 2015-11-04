@@ -1,0 +1,13 @@
+{
+  "name": "TODO.com",
+  "version": "0.0.a",
+  "authors": [
+    "dpagini <david.pagini@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "fontawesome#~4.4.0"
+  },
+  "devDependencies": {}
+}

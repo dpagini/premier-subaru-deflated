@@ -21,7 +21,6 @@ module.exports = {
 				cwd: '<%= paths.src %>',
 				src: [
           "favicon.ico",
-          "gerry-email.pdf",
           "CNAME",
           "robots.txt"
 				],

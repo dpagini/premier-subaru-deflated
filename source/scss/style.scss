@@ -5,3 +5,18 @@
 @import "modules/nav";
 @import "modules/aside";
 @import "modules/section";
+
+/*
+//styles i like
+font-family: "Tangerine", cursive;
+font-family: "Gloria Hallelujah", cursive;
+font-family: "Rock Salt", cursive;
+font-family: "Cookie", cursive;
+font-family: "Bad Script", cursive;
+font-family: "Damion", cursive;
+font-family: "Calligraffitti", cursive;
+*/
+
+.scroll.top {
+  z-index: $zindex-top;
+}

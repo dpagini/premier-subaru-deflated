@@ -1,0 +1,6 @@
+.commercial {
+  width: 100%;
+  height: 300px;
+  background: transparent url('/images/subaru2.jpg') center bottom no-repeat fixed;
+  @include background-size(cover);
+}
