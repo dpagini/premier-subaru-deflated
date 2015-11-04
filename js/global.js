@@ -38,7 +38,7 @@ $(document).ready(function() {
 
 	// parallax // example: http://jsfiddle.net/QN9cH/1/
 	$(document).ready(function(){
-    $('section[data-parallax-effect="fixed"]').each(function(){
+    $('[data-parallax-effect="fixed"]').each(function(){
 				var $section = $(this);
         $(window).scroll(function() {
 						$section.css('background-position-y', $(this).scrollTop() + 'px');
