@@ -38,10 +38,11 @@ $(document).ready(function() {
 
 	// parallax // example: http://jsfiddle.net/QN9cH/1/
 	$(document).ready(function(){
-    $('[data-parallax-effect="fixed"]').each(function(){
+    $('section[data-parallax-effect="fixed"]').each(function(){
 				var $section = $(this);
+				var offsetY = $section.data("parallax-offset-y") || 0;
         $(window).scroll(function() {
-						$section.css('background-position-y', $(this).scrollTop() + 'px');
+						$section.css('background-position-y', ($(this).scrollTop() - $section.offset().top + offsetY) + 'px');
         });
     });
 });
