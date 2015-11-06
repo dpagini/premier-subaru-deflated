@@ -42,7 +42,9 @@ $(document).ready(function() {
 				var $section = $(this);
 				var offsetY = $section.data("parallax-offset-y") || 0;
         $(window).scroll(function() {
+					if (isElementInViewport($section)) { // only run this if section is in viewport
 						$section.css('background-position-y', ($(this).scrollTop() - $section.offset().top + offsetY) + 'px');
+					}
         });
     });
 });
@@ -64,3 +66,23 @@ $(document).ready(function() {
 		}
 	});
 });
+
+// http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+function isElementInViewport(el) {
+    //special bonus for those using jQuery
+    if (typeof jQuery === "function" && el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var r, html;
+    if ( !el || 1 !== el.nodeType ) { return false; }
+    html = document.documentElement;
+    r = el.getBoundingClientRect();
+
+    return ( !!r
+      && r.bottom >= 0
+      && r.right >= 0
+      && r.top <= html.clientHeight
+      && r.left <= html.clientWidth
+    );
+}
