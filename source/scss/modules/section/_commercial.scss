@@ -1,6 +1,9 @@
-.commercial {
-  width: 100%;
-  height: 300px;
-  background: transparent url('/images/subaru2.jpg') center bottom no-repeat fixed;
-  @include background-size(cover);
+section {
+  &.commercial {
+    width: 100%;
+    height: 350px;
+    min-height: initial; // undo _section.scss
+    background: transparent url('/images/subaru2.jpg') center bottom no-repeat scroll;
+    @include background-size(cover);
+  }
 }
